@@ -17,6 +17,9 @@ function Navbar() {
         <li>
           <Link to="/airplanes">Airplanes</Link>
         </li>
+        <li>
+          <Link to="/createflight">Create Flight</Link>
+        </li>
       </ul>
     </nav>
   );

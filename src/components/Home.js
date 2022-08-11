@@ -7,7 +7,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div id="search-form">
                 <h1>Welcome to the Chicago Bulls Dream team</h1>
                 <Login onSubmit={ this._handleLogin }/>
             </div>
@@ -40,12 +40,10 @@ class Login extends Component {
         this.props.onSubmit(this.state.email);
         this.setState({ email: '' });
 
-        const SERVER_URL = 'https://burning-airlines-92-dream-team.herokuapp.com/search';
-
         if (this.state.email === 'admin@ga.co' && this.state.password === 'chicken')
         {
             console.log('Login succesful');
-            window.location.href = `${ SERVER_URL }`;
+            window.location.href = window.location.href + 'search';
         } else {
             console.log('Login failed');
         }
@@ -53,7 +51,7 @@ class Login extends Component {
 
     render() {
         return (
-              <div class="Login">
+              <div className="Login">
                 <h2>Login</h2>
                 <form onSubmit={ this._handleSubmit }>
                     <input onChange={ this._handleEmail } value={ this.state.email } type="text" placeholder="Email" email="email" />

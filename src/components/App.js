@@ -5,6 +5,7 @@ import Home from "./Home";
 import BurningAirlines from './BurningAirlines';
 import ShowAirplane from './ShowAirplane';
 import FlightBooker from './FlightBooker';
+import CreateFlight from './CreateFlight';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="flights" element={<BurningAirlines class="BurningAirlines" />} />
           <Route path="search" element={<FlightBooker />} />
           <Route path="airplanes" element={<ShowAirplane/>} />
+          <Route path="createflight" element={<CreateFlight/>} />
         </Route>
       </Routes>
     </BrowserRouter>
