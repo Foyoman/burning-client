@@ -3,8 +3,6 @@ import axios from 'axios';
 
 import FlightGallery from './FlightGallery';
 import AirplaneGallery from './AirplaneGallery';
-import FlightSearch from './FlightSearch';
-import FlightBooker from './FlightBooker';
 import _ from 'lodash';
 
 
@@ -39,16 +37,28 @@ class BurningAirlines extends Component {
         fetchAirplanes();
     }
 
+    saveFlight(flightInfo) {
+        axios.post(SERVER_URL, { flightInfo: flightInfo }).then        ((response) => {
+            this.setState({flights: [response.data, ...this.state.flights]})
+        });
+    }
+
+    saveAirplane(airplaneInfo) {
+        axios.post(SERVER_URL, { airplaneInfo: airplaneInfo }).then((response) => {
+            this.setState({airplanes: [response.data, ...this.state.airplanes]})
+        });
+    }
+
     render() {
         return (
-            <div>
+            <div id="search-form">
                 <h1>Burning Airlines</h1>
                 <FlightGallery flights={ this.state.flights } />
                 <AirplaneGallery airplanes={ this.state.airplanes } />
-                <FlightBooker 
+                {/* <FlightBooker 
                     flights={ this.state.flights }
                     airplanes={ this.state.airplanes } 
-                />
+                /> */}
             </div>
         )
     }

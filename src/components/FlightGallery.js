@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const FlightGallery = (props) => {
-    // const f_airplane = function (airplane) {
-    //     return airplane.id === f.airplane_id
-    // }
-    // props.flights.map((f) => {
-    //     f.airplane = _(props.airplanes).find({ id: f.airplane_id })
-    // })
     return (
         <div>
             <h2>{ props.flights.length } Burning Flights</h2>
@@ -23,9 +17,7 @@ const FlightGallery = (props) => {
                     </tr>
                 </thead>
             
-            
                 <tbody>
-                    
                     { props.flights.map((f) => {
                         return (
                             <tr key={ f.id }>
@@ -38,9 +30,7 @@ const FlightGallery = (props) => {
                             </tr>
                         )
                     })}
-                                       
                 </tbody>
-
             </table>
         </div>
     )
