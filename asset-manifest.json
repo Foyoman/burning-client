@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/burning-client/static/css/main.9864d9d7.css",
-    "main.js": "/burning-client/static/js/main.5e1f5cc6.js",
+    "main.js": "/burning-client/static/js/main.69ad498e.js",
     "static/js/787.7ed5ec31.chunk.js": "/burning-client/static/js/787.7ed5ec31.chunk.js",
     "index.html": "/burning-client/index.html",
     "main.9864d9d7.css.map": "/burning-client/static/css/main.9864d9d7.css.map",
-    "main.5e1f5cc6.js.map": "/burning-client/static/js/main.5e1f5cc6.js.map",
+    "main.69ad498e.js.map": "/burning-client/static/js/main.69ad498e.js.map",
     "787.7ed5ec31.chunk.js.map": "/burning-client/static/js/787.7ed5ec31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9864d9d7.css",
-    "static/js/main.5e1f5cc6.js"
+    "static/js/main.69ad498e.js"
   ]
 }
