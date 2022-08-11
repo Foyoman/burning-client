@@ -8,7 +8,7 @@ import FlightBooker from './FlightBooker';
 import _ from 'lodash';
 
 
-const SERVER_URL = 'http://localhost:3001/'; // Later: change this to the deployed URL
+const SERVER_URL = 'https://burning-airlines-92-dream-team.herokuapp.com/'; // Later: change this to the deployed URL
 
 class BurningAirlines extends Component {
     constructor() {
@@ -37,18 +37,6 @@ class BurningAirlines extends Component {
 
         fetchFlights();
         fetchAirplanes();
-    }
-
-    saveFlight(flightInfo) {
-        axios.post(SERVER_URL, { flightInfo: flightInfo }).then        ((response) => {
-            this.setState({flights: [response.data, ...this.state.flights]})
-        });
-    }
-
-    saveAirplane(airplaneInfo) {
-        axios.post(SERVER_URL, { airplaneInfo: airplaneInfo }).then((response) => {
-            this.setState({airplanes: [response.data, ...this.state.airplanes]})
-        });
     }
 
     render() {

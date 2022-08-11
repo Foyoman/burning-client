@@ -40,7 +40,7 @@ class Login extends Component {
         this.props.onSubmit(this.state.email);
         this.setState({ email: '' });
 
-        const SERVER_URL = 'http://localhost:3001/search';
+        const SERVER_URL = 'https://burning-airlines-92-dream-team.herokuapp.com/search';
 
         if (this.state.email === 'admin@ga.co' && this.state.password === 'chicken')
         {

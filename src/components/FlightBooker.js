@@ -3,7 +3,7 @@ import axios from 'axios';
 import _ from 'lodash';
 // import _ from 'lodash';
 
-const SERVER_URL = 'http://localhost:3001/flights.json'; 
+const SERVER_URL = 'https://burning-airlines-92-dream-team.herokuapp.com/flights.json'; 
 
 class FlightSearchForm extends Component {
   constructor(props) {
@@ -115,7 +115,7 @@ class FlightDisplay extends Component {
   }
 }
 
-const SERVER_URL2 = 'http://localhost:3001/reservations.json'
+const SERVER_URL2 = 'https://burning-airlines-92-dream-team.herokuapp.com/reservations.json'
 
 class SeatMap extends Component {
   constructor(props){
