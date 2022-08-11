@@ -1,0 +1,153 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body {
+    margin: 0;
+    background-image: url('https://media.istockphoto.com/vectors/airplane-travel-around-the-world-vector-id649243752');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: #1c4a7d;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.plane {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    max-height: 66em;
+    background-image: url('http://cdn.onlinewebfonts.com/svg/img_536969.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2em 0;
+}
+
+.seat {
+    max-width: 1em;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s;
+    color: blue;
+    border: 1px solid black;
+    padding: 0 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.895);
+}
+
+.seat:hover {
+    background-color: lavender;
+}
+
+.occupied {
+    color: grey;
+    background-color: lavender;
+}
+
+.occupied:hover {
+    cursor: default;
+}
+
+#root {
+    background-color: white;
+    max-width: 963px;
+    margin: 0 auto;
+}
+
+.FromTo {
+    margin: 1em;
+}
+
+.bookingForm > button, .seatFetcher > input {
+    background: #1c4a7d;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    cursor: pointer
+}
+
+#search-form {
+    border: 1px solid #1c4a7d;
+    background-color: aliceblue;
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.FlightDisplay {
+    border: 1px solid #1c4a7d;
+    background-color: aliceblue;
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#searchButton {
+    background: #1c4a7d;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#seatFetcher {
+    background: #1c4a7d;
+    color:  white;
+    font-size:  1.2em;
+    margin-top:  10px;
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.Container {
+    display: block;
+}
+
+.FromTo {
+    display: table-caption;
+}
+
+h2 {
+    color: #1c4a7d;
+    margin-left: 20px;
+    font-size: 1.3em
+}
+
+.FlightDisplay {
+    margin-bottom: 2em;
+}
