@@ -40,12 +40,10 @@ class Login extends Component {
         this.props.onSubmit(this.state.email);
         this.setState({ email: '' });
 
-        const SERVER_URL = 'https://burning-airlines-92-dream-team.herokuapp.com/search';
-
         if (this.state.email === 'admin@ga.co' && this.state.password === 'chicken')
         {
             console.log('Login succesful');
-            window.location.href = `${ SERVER_URL }`;
+            window.location.href = window.location.href + 'search';
         } else {
             console.log('Login failed');
         }
