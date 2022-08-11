@@ -13,7 +13,7 @@ class CreateFlight extends Component {
         newDestination: '',
         newDate: '',
         newFlightNumber: '',
-        newAirplane_id: Math.floor(Math.random() * 5) + 1,
+        newAirplane: Math.floor(Math.random() * 5) + 1,
         flightCreated: false
     }
 
@@ -37,12 +37,18 @@ class CreateFlight extends Component {
         this.setState(state => ({ ...state, newFlightNumber: value }));
     }
 
+    _handleAirplane = (event) => {
+        const value = event.target.value;
+        this.setState(state => ({ ...state, newAirplane: value }));
+    }
+
     _handleCreate = (() => {
         const data = {
             origin: this.state.newOrigin,
             destination: this.state.newDestination,
             date: this.state.newDate,
-            flight_number: this.state.newFlightNumber
+            flight_number: this.state.newFlightNumber,
+            airplane_id: this.state.newAirplane
         }
 
         axios.post(SERVER_URL, data, { headers: {
@@ -73,7 +79,8 @@ class CreateFlight extends Component {
                 <h3>Flight Number</h3>
                 <input onChange={ this._handleFlightNumber } type="text" placeholder="Flight Number" />
 
-                <button>Create</button>
+                <button onClick={ this._handleCreate }>Create</button>
+                {/* <button>Create</button> */}
             </div>
         );
     }

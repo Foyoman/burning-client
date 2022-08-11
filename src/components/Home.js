@@ -43,7 +43,7 @@ class Login extends Component {
         if (this.state.email === 'admin@ga.co' && this.state.password === 'chicken')
         {
             console.log('Login succesful');
-            window.location.href = window.location.href + 'search';
+            window.location.href = window.location.href + 'flights';
         } else {
             console.log('Login failed');
         }
